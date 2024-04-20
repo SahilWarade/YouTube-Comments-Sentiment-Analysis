@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Youtube Sentiment Analysis </title>
+        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap'><link rel="stylesheet" href="/static/css/style.css">
+        
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="login_box">
+
+    <!-- <div class="login-header">
+      <span>Login</span>
+    </div> -->
+<label for="user" class="label">Enter the ID</label>
+    <div class="input_box">
+      
+        <form id="form1"action="/analyze" method="post">
+            <input type="text" id="video_id" name="video_id" class="input-field" required>
+        </form>
+      
+    </div>
+ <!-- <label for="pass" class="label">Password</label>
+    <div class="input_box">
+     
+      <input type="password" id="pass" class="input-field" required>
+      
+      <i class="bx bx-lock-alt icon"></i>
+    </div> -->
+
+    <!-- <div class="remember-forgot">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <div class="forgot">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div> -->
+
+    <div class="input_box">
+        <input id="subm" type="submit" class="input-submit" value="Submit" >
+    </div>
+
+    <!-- <div class="register">
+      <span>Don't have an account? <a href="#">Register</a></span>
+    </div> -->
+    <div class="card" style="display: none;">
+        <p>Analysis result is:<strong>Graph</strong> trend.</p>
+        <p class="card-footer">
+            <img src="/static/graph3.png">
+        </p>
+    
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+  
+</body>
+<script>
+    // JavaScript code to clear input field on page load
+    window.onload = function() {
+      document.getElementById('video_id').value = '';
+    };
+    
+
+    document.getElementById('subm').addEventListener('click', function()
+    {
+        document.getElementById('form1').submit();
+    });
+
+  </script>
+</html>
