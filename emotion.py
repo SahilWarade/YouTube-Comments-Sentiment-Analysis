@@ -18,7 +18,7 @@ def detect_language(text):
             hindi_count += 1
         elif english_range[0] <= char_code <= english_range[1]:
             english_count += 1
-
+#counting total hindi words and english words
     if hindi_count > english_count:
         return "Hindi"
     elif english_count > hindi_count:
